@@ -1,0 +1,264 @@
+
+body {
+    height:100%;
+    background-color: whitesmoke;
+    color: #293133;
+    margin: 3em 1em 0;
+    line-height: 1.5;
+    font-family: "Lora", serif;
+}
+
+.intro-text{
+    overflow: hidden;
+    z-index: 1;
+}
+
+body > section, .intro-text{
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  width: 100%;
+}
+
+body .intro-text p{
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+body > section {
+  overflow: hidden;
+}
+
+
+body .intro-text p span{
+  color: #E00808;
+  font-family: "Roboto Mono", serif;
+}
+
+body > section:nth-of-type(even), .intro-text{
+  margin: 0 -1em;
+  padding: 0 1em;
+  background-color: #FFD814;
+}
+
+#over-mij article{
+  display: flex;
+  flex-direction: column;
+}
+
+#over-mij article div{
+  align-items: space-between;
+}
+
+header {
+    margin:0;
+    padding:0;
+}
+
+Article {
+    margin: 0 auto;
+    max-width: 755px;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0.5em 0 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+header nav{
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    border-bottom: solid #293133 1px;
+    z-index: 100;
+    background-color: #FFD814;
+}
+
+header nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header nav ul li{
+  display: flex;
+  flex: 1;
+}
+
+header nav ul li a {
+    color: #293133;
+    text-decoration: none;
+    padding: 1em 0.5em;
+    font-size: 0.9em;
+    width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+section article ul li{
+  font-size: 1.25em;
+}
+
+header nav ul li:first-of-type a {
+  padding-left: 1em;
+}
+
+header nav ul li:last-of-type a {
+  padding-right: 1em;
+}
+
+header nav ul li a:hover{
+    background-color: ;
+    text-decoration: underline;
+}
+
+footer{
+    box-sizing:border-box;
+    padding: 0px 10px;
+    width: 100%;
+    height: 100%;
+    background-color: #293133;
+    border-top:3px orange;
+}
+
+.container{
+  display: flex;
+  overflow: hidden;
+}
+
+.container div{
+  flex: 1;
+  padding-right: 0.5em;
+}
+
+.container div img{
+  max-width: 100%;
+
+}
+
+.container div:last-of-type{
+  flex-direction: row;
+}
+
+
+
+#verzendenknop{
+    color: #293133;
+    border: none;
+    padding: 1em;
+    font-size: 1em;
+    background-color: #FFD814;
+    font-family: "Roboto Mono", serif;
+    width: 100%;
+    border: solid #293133 1px;
+}
+
+
+#projecten a{
+  text-decoration: none;
+  color: #293133;
+  background-color: #FFD814;
+  padding: 1em;
+  border: solid #293133 1px;
+  font-family: "Roboto Mono", monospace;
+}
+
+#projecten article > div:nth-of-type(2){
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#projecten article > div:nth-of-type(2) > div{
+  padding: 0.5em 0;
+}
+
+#projecten article > div:first-of-type{
+  display: flex;
+}
+
+.container-2{
+  display: flex;
+  flex-direction: column;
+}
+
+.container-2 div{
+  flex: 1;
+  padding-right: 0.5em;
+}
+
+.container-2 div img{
+  max-width: 100%;
+
+}
+
+.container-2 div:last-of-type{
+  flex-direction: column
+}
+
+@keyframes introAnimatie{
+  0%    { transform: translateX(30em); opacity: 0;}
+  50%   { transform: translateX(0); opacity: 0.5;}
+  100%  { transform: translateX(0); opacity: 1;}
+}
+
+.animation{
+  animation: introAnimatie 1s forwards;
+}
+
+.animation-1{
+  animation: introAnimatie 2s forwards;
+}
+
+.animation-2{
+  animation: introAnimatie 3s forwards;
+}
+
+@keyframes hartjeAnimatie{
+  0%    {width: 10%; transform: translateX(0) translateY(0);}
+  50%   {width: 20%; transform: translateX(-1em) translateY(1em);}
+  100%  {width: 100%; transform: translateX(0) translateY(0);}
+}
+
+.animation-3{
+  animation: hartjeAnimatie 1s ease-out forwards;
+}
+
+
+@media(min-width: 768px){
+  p{
+    max-width: 60ch;
+    margin: 1em auto;
+  }
+  header nav ul{
+    margin: 0 auto;
+    max-width: 755px;
+  }
+  header nav{
+
+  }
+  section > article{
+    width: 500px;
+  }
+  /* #over-mij > article{
+    max-width: 500px;
+  } */
+}
